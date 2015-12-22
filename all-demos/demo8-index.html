@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>组件的状态</title>
+	<script src="../libs/react.js"></script>
+    <script src="../libs/react-dom.js"></script>
+    <script src="../libs/browser.min.js"></script>
+</head>
+<body>
+	<div id="demo"></div>
+	<hr/>
+	<p>组件之间的交互，是不可能避免掉的。React的创新，就是将组件看作一个状态机，一开始有一个初始状态，然后用户交互，导致状态变化，从而触发重新渲染UI</p>
+
+	<p>上面代码是一个LikeButton组件，它的getInitialState方法用于定义初始状态，也就是一个对象，这个对象可以通过 this.state 属性读取。当用户点击组件，导致状态变化，this.setState 方法就修改状态值，每次修改以后，自动调用 this.render 方法，再次渲染组件。</p>
+	<p>this.props和this.state都描述的事是组件的特性，可能会产生混淆。区分的方法是this.props表示一旦定义，就不能改变的特性，而this.state是可以随着用户的交互而产生变化的特性。</p>
+	<script src='../build/demo8.js'></script>
+</body>
+</html>

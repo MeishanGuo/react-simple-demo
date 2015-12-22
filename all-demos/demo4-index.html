@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="../libs/react.js"></script>
+    <script src="../libs/react-dom.js"></script>
+    <script src="../libs/browser.min.js"></script>
+</head>
+<body>
+	<div id="demo">React组件－createClass，并获得其属性</div>
+	<hr/>
+
+	<p>
+	React 允许将代码封装成组件（component），然后向插入普通的HTML标签一样，在网页中插入这个组件
+	</p>
+	<p>React.createClass 方法用于生成一个组件类。</p>
+	<p>上述代码中，变量HelloReact就是一个组件类。模版插入<HelloReact/>时，会自动生成HelloReact的一个实例。</p>
+	<p>所有的组件类都必须拥有自己的render方法，用于输出组件。</p>
+	<p>注：组件类的第一个字母必须大写；组件类只能包含一个顶级组件。</p>
+	<p></p>>添加组件属性，有一个地方需要注意，就是 class 属性需要写成 className ，for 属性需要写成 htmlFor ，这是因为 class 和 for 是 JavaScript 的保留字。</p>
+	<p>组件的属性可以接受任意值，字符串、对象、函数等等都可以</p>
+
+	<script src='../build/demo4.js'></script>
+</body>
+</html>

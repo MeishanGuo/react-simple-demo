@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>获得真实的dom节点</title>
+	<script src="../libs/react.js"></script>
+    <script src="../libs/react-dom.js"></script>
+    <script src="../libs/browser.min.js"></script>
+</head>
+<body>
+	<div id="demo"></div>
+	<hr/>
+	<p>组件并不是真实的dom节点，而是存在于内存中的一种数据结构，叫做虚拟dom。只有当它插入文档以后，才会变成真实的dom，根据React的设计，所有dom的变动，都现在虚拟dom上发生，然后再将是继变动的部分，反应在真实的dom上，这样设计可以极大提高页面的性能表现。</p>
+	<p>在某些场景中，需要获得真实的dom节点，这是就要用到def属性</p>
+	<p>需要注意的是，由于 this.refs.[refName] 属性获取的是真实 DOM ，所以必须等到虚拟 DOM 插入文档以后，才能使用这个属性，否则会报错。上面代码中，通过为组件指定 Click 事件的回调函数，确保了只有等到真实 DOM 发生 Click 事件之后，才会读取 this.refs.[refName] 属性。</p>
+	<p>Reactc支持的事件有：</p>
+	<p>剪切板事件：onCopy ，onCut ，onPaste</p>
+	<p>组件事件：onCompositi，onEnd ，onCompositi，onStart ，onCompositi，onUpdate</p>
+	<p>键盘事件：onKeyDown ，onKeyPress ，onKeyUp</p>
+	<p>input框事件：onFocus ，onBlur</p>
+	<p>form表单事件：onChange ，onInput ，onSubmit</p>
+	<p>鼠标事件：onClick ，onContextMenu ，onDoubleClick ，onDrag ，onDragEnd ，onDragEnter ，onDragExit，onDragLeave ，onDragOver ，onDragStart ，onDrop ，onMouseDown ，onMouseEnter ，onMouseLeave,onMouseMove ,onMouseOut ,onMouseOver ,onMouseUp</p>
+	<script src='../build/demo7.js'></script>
+</body>
+</html>
